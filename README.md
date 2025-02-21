@@ -55,3 +55,10 @@ INFO:__main__:  ...
 INFO:__main__:
 Total blobs: 1000
 ```
+
+if we install the `az` [command line tool](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli) (`brew install azure-cli` on the mac), we can see files with:
+
+```
+az storage blob download -c testcontainer -n 1.xml --connection-string "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;" --output none --no-progress
+<root><id>1</id><data>Test data for record 1</data><timestamp>2025-02-20 22:55:08.664026+00</timestamp></root>
+```
